@@ -21,12 +21,8 @@ function startGame () {
     var surroundingMines = countSurroundingMines(board.cells[i])
   };
   lib.initBoard();
-  document.addEventListener("click", function() {
-    checkForWin()
-  });
-  document.addEventListener("contextmenu", function() {
-    checkForWin()
-  });
+  document.addEventListener("click", checkForWin);
+  document.addEventListener("contextmenu", checkForWin);
 }
 
 // Define this function to look for a win condition:
